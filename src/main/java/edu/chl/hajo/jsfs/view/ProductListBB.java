@@ -3,10 +3,13 @@ package edu.chl.hajo.jsfs.view;
 import edu.chl.hajo.jsfs.core.SingletonShop;
 import edu.chl.hajo.shop.core.Product;
 import edu.chl.hajo.shop.core.Shop;
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 /**
  * 
@@ -14,7 +17,9 @@ import javax.inject.Inject;
  * @author hajo
  */
 
-public class ProductListBB  {
+@Named
+@ViewScoped 
+public class ProductListBB implements Serializable {
     private Shop reg;
     private static final Logger LOG = Logger.getLogger(ProductListBB.class.getName());
     private int currentPage = 0;
