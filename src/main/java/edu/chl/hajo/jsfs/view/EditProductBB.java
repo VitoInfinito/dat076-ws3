@@ -15,7 +15,7 @@ import javax.inject.Named;
  */
 
 @Named
-@ViewScoped
+@RequestScoped
 public class EditProductBB  {
     
     private static final Logger LOG = Logger.getLogger(EditProductBB.class.getName());

@@ -7,7 +7,7 @@
 
     <h:body>
         
-        <ui:composition template="../WEB-INF/template.xhtml">
+        <ui:composition template="../../WEB-INF/template.xhtml">
 
             <ui:define name="metadata">
                 <f:metadata>
@@ -27,16 +27,16 @@
                 <h:form>
                     <h:panelGrid columns="2" class="table">
                         <h:outputLabel value="Id"/>
-                        <h:outputText value="#{productDetailBB.id}"/> 
+                        <h:outputText value="#{editProductBB.id}"/> 
                         <h:outputLabel value="Name" />
-                        <h:inputText value="#{productDetailBB.name}"/> 
+                        <h:inputText value="#{editProductBB.name}"/> 
                         <h:outputLabel value="Price" />
-                        <h:inputText value="#{productDetailBB.price}"/> 
+                        <h:inputText value="#{editProductBB.price}"/> 
                     </h:panelGrid>
                     <div class="btn-group">
                         <h:commandButton value="Cancel" immediate="true" class="btn btn-default"
                                          action="productList?faces-redirect=true" />
-                        <h:commandButton value="Save" action="#{productDetailCtrl.update()}" class="btn btn-default"/>
+                        <h:commandButton value="Save" action="#{editProductCtrl.update()}" class="btn btn-default"/>
                     </div>
                 </h:form>
             </ui:define>
