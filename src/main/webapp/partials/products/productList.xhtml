@@ -6,10 +6,49 @@
       xmlns:f="http://java.sun.com/jsf/core">
 
     <h:body>
-        <ui:composition template="/WEB-INF/template.xhtml">
+         <ui:composition template="../WEB-INF/template.xhtml">
+            <ui:define name="top">
+                <h2>Products</h2>
+                <h:link outcome="productNew.xhtml" >New</h:link>
+                <hr/>
+            </ui:define>
+
+
             <ui:define name="content">
-                <h3>Products</h3>
-                
+                <h:form>
+                    <h:commandButton value="Prev" actionListener="${productListBB.prev}">
+                        <f:ajax execute="@form" render="productsPanel" />
+                    </h:commandButton>
+                   
+                    <h:commandButton value="Next" actionListener="${productListBB.next}">
+                        <f:ajax execute="@form" render="productsPanel" />
+                    </h:commandButton>
+                    <!-- Must have this to get an id for the ajax render attribute -->
+                    <h:panelGroup id="productsPanel" >
+                        <table class="table">
+                            <thead>
+                                <td>Id</td>
+                                <td>Name</td>
+                                <td>Age</td>
+                            </thead>
+                            <ui:repeat var="product" value="#{productListBB.getList()}">
+                                <tr>
+                                    <td><h:outputText value="#{product.id}" /></td>
+                                    <td><h:outputText value="#{product.name}" /></td>
+                                    <td><h:outputText value="#{product.price}" /></td>
+                                    <td>
+                                        <h:link value="Edit" outcome="productDetail">
+                                            <f:param name="id" value="#{product.id}" />
+                                            <f:param name="name" value="#{product.name}" />
+                                            <f:param name="price" value="#{product.price}" />
+                                        </h:link>
+                                    </td>
+                                </tr>
+                            </ui:repeat>
+                        </table>
+                    </h:panelGroup>
+                </h:form>
+
 
             </ui:define>
         </ui:composition>
