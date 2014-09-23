@@ -19,9 +19,7 @@ import javax.inject.Named;
 public class AddProductBB {
     private Shop reg;
     private static final Logger LOG = Logger.getLogger(ProductListBB.class.getName());
-    private int currentPage = 0;
-    private final int pageSize = 5;
-    private int count;
+    private Product p;
 
     protected AddProductBB() {
         // Must have for CDI
@@ -31,14 +29,13 @@ public class AddProductBB {
     public AddProductBB(SingletonShop reg) {
         this.reg = (Shop) reg.getShop();
     }
-
-    @PostConstruct
-    public void post() {
-        count = reg.getProductCatalogue().count();
-    }
     
     public Product getProduct(long id){
         return reg.getProductCatalogue().find(id);
+    }
+    
+    public void create(){
+        //TODO..
     }
    
     
