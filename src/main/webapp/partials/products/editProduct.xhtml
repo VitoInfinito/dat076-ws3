@@ -18,12 +18,15 @@
             </ui:define>
 
             <ui:define name="top">
-                <h2>Person Detail</h2>
-                <h:link outcome="productList.xhtml">Person List</h:link>
+                <h2>Edit Product</h2>
+                <h:link outcome="productList.xhtml">Product List</h:link>
             </ui:define>
 
 
             <ui:define name="content">
+                #{editProductBB.id}
+                #{editProductBB.name}
+                #{editProductBB.price}
                 <h:form>
                     <h:panelGrid columns="2" class="table">
                         <h:outputLabel value="Id"/>
@@ -36,7 +39,7 @@
                     <div class="btn-group">
                         <h:commandButton value="Cancel" immediate="true" class="btn btn-default"
                                          action="productList?faces-redirect=true" />
-                        <h:commandButton value="Save" action="#{editProductCtrl.update()}" class="btn btn-default"/>
+                        <h:commandButton value="Update" action="#{editProductCtrl.update}" class="btn btn-default"/>
                     </div>
                 </h:form>
             </ui:define>

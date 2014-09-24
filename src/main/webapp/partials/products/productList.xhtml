@@ -31,7 +31,7 @@
                                 <td>Name</td>
                                 <td>Price</td>
                             </thead>
-                            <ui:repeat var="product" value="#{productListBB.getList()}">
+                            <ui:repeat var="product" value="#{productListBB.list}">
                                 <tr>
                                     <td><h:outputText value="#{product.id}" /></td>
                                     <td><h:outputText value="#{product.name}" /></td>
