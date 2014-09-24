@@ -23,6 +23,10 @@
      <navigation-case>
         <from-outcome>orders</from-outcome>
         <to-view-id>partials/orders/orders.xhtml</to-view-id>
+    </navigation-case> 
+    <navigation-case>
+        <from-outcome>edit</from-outcome>
+        <to-view-id>partials/products/editProduct.xhtml</to-view-id>
     </navigation-case>  
 </navigation-rule>       
     

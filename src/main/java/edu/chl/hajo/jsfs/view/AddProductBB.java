@@ -9,13 +9,20 @@ import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 @Named
 @RequestScoped
 public class AddProductBB {
     private Shop reg;
     private static final Logger LOG = Logger.getLogger(AddProductBB.class.getName());
+    @NotNull
+    @Pattern(regexp = "[a-zA-Z]+")
     private String name;
+    
+    @Min(value = 0, message = "Too small")
     private double price;
 
     protected AddProductBB() {
