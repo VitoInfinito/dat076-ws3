@@ -36,7 +36,5 @@ public class AddProductBB {
     
     public void create(){
         //TODO..
-    }
-   
-    
+    }      
 }

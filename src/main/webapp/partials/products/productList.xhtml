@@ -37,7 +37,8 @@
                                     <td><h:outputText value="#{product.name}" /></td>
                                     <td><h:outputText value="#{product.price}" /></td>
                                     <td>
-                                        <h:link value="Edit" outcome="EditProductCtrl">
+
+                                        <h:link value="Edit" outcome="editProduct">
                                             <f:param name="id" value="#{product.id}" />
                                             <f:param name="name" value="#{product.name}" />
                                             <f:param name="price" value="#{product.price}" />
