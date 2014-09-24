@@ -16,6 +16,7 @@
 
             <ui:define name="content">
                 <h:form>
+                    <h:button value="New Product" outcome="addProduct"></h:button>
                     <h:commandButton value="Prev" actionListener="${productListBB.prev}">
                         <f:ajax execute="@form" render="productsPanel" />
                     </h:commandButton>
