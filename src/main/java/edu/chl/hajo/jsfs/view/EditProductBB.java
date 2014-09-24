@@ -40,7 +40,6 @@ public class EditProductBB  {
 
     public void setId(Long id) {
         this.id = id;
-        LOG.log(Level.INFO, "Set id {0}", id);
     }
 
     public String getName() {
@@ -49,7 +48,6 @@ public class EditProductBB  {
 
     public void setName(String name) {
         this.name = name;
-        LOG.log(Level.INFO, "Set fname {0}", name);
     }
 
     public double getPrice() {
@@ -58,12 +56,11 @@ public class EditProductBB  {
 
     public void setPrice(int price) {
         this.price = price;
-        LOG.log(Level.INFO, "Set age {0}", price);
     }
 
     @Override
     public String toString() {
-        return "PersonDetailBB{" + "id=" + id + ", fname=" + name + ", age=" + price + '}';
+        return "PersonDetailBB{" + "id=" + id + ", name=" + name + ", price=" + price + '}';
     }
   
 }
