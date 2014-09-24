@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core">
 
     <h:body>
         
@@ -24,9 +24,6 @@
 
 
             <ui:define name="content">
-                #{editProductBB.id}
-                #{editProductBB.name}
-                #{editProductBB.price}
                 <h:form>
                     <h:panelGrid columns="2" class="table">
                         <h:outputLabel value="Id"/>
