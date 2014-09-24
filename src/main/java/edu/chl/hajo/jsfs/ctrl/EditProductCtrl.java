@@ -39,26 +39,11 @@ public class EditProductCtrl {
         this.reg = (Shop) reg.getShop();
     }
     
-    // Lie this --------------------
     @Inject
     public void setProductBB(EditProductBB productBB) {
         this.productBB = productBB;
     }
-   
-    /*public String save() {
-        LOG.log(Level.INFO, "Save: {0}" + productBB);
-        reg.getProductCatalogue().update(new Product(productBB.getId(), productBB.getName(), productBB.getPrice()));
-        return "productList?faces-redirect=true";
-    }*/
-    // ---- or like this 
-    /*public String save(PersonDetailBB personBB) {
-        LOG.log(Level.INFO, "Save: {0}" + personBB);
-        reg.create(new Person(personBB.getId(), personBB.getFname(), personBB.getAge()));
-        return "personList?faces-redirect=true";
-    }*/
-    
-    
-
+ 
     public String update() {
         LOG.log(Level.INFO, "Update: {0}" + productBB);
         reg.getProductCatalogue().update(new Product(productBB.getId(), productBB.getName(), productBB.getPrice()));
