@@ -46,9 +46,7 @@
                                         </h:link>
                                     </td>
                                     <td>
-                                        <h:link value="Del" outcome="deleteProduct">
-                                            <f:param name="id" value="#{product.id}" />
-                                        </h:link>
+                                        <h:commandLink id="delete" value="Del" action="#{deleteProductCtrl.delete(product.id)}" />
                                     </td>
                                 </tr>
                             </ui:repeat>

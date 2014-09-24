@@ -39,7 +39,6 @@ public class EditProductCtrl {
         this.reg = (Shop) reg.getShop();
     }
     
-    // Lie this --------------------
     @Inject
     public void setProductBB(EditProductBB productBB) {
         this.productBB = productBB;
