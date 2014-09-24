@@ -7,6 +7,9 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 /**
  *
@@ -20,7 +23,10 @@ public class EditProductBB  {
     private static final Logger LOG = Logger.getLogger(EditProductBB.class.getName());
 
     private Long id;
+    @NotNull
+    @Pattern(regexp = "[a-zA-Z]+")
     private String name;
+    @Min(value = 0, message = "Too small")
     private double price;
 
     @PostConstruct
