@@ -12,10 +12,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-/**
- *
- * @author hajo
- */
+
 @Named
 @RequestScoped
 public class EditProductCtrl {

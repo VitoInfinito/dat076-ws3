@@ -11,12 +11,6 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-/**
- * 
- *
- * @author hajo
- */
-
 @Named
 @ViewScoped 
 public class ProductListBB implements Serializable {

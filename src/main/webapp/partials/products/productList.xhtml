@@ -44,6 +44,11 @@
                                             <f:param name="price" value="#{product.price}" />
                                         </h:link>
                                     </td>
+                                    <td>
+                                        <h:link value="Del" outcome="deleteProduct">
+                                            <f:param name="id" value="#{product.id}" />
+                                        </h:link>
+                                    </td>
                                 </tr>
                             </ui:repeat>
                         </table>

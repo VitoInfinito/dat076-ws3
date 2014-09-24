@@ -4,7 +4,12 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html">
     <h:body>
-        <ui:composition template="/WEB-INF/template.xhtml">
+        <ui:composition template="../../WEB-INF/template.xhtml">
+            <ui:define name="metadata">
+                <f:metadata>
+                    <f:viewParam name="id" value="#{editProductBB.id}"  />
+                </f:metadata>
+            </ui:define>
             <ui:define name="content">
                 <h3>Delete product</h3>
 
