@@ -26,12 +26,12 @@ public class EditProductBB  {
 
     @PostConstruct
     public void post() {
-        LOG.log(Level.INFO, "PersonDetailBB alive {0}", this);
+        LOG.log(Level.INFO, "EditProductBB alive {0}", this);
     }
 
     @PreDestroy
     public void pre() {
-        LOG.log(Level.INFO, "PersonDetailBB to be destroyed {0}", this);
+        LOG.log(Level.INFO, "EditProductBB to be destroyed {0}", this);
     }
 
     public Long getId() {

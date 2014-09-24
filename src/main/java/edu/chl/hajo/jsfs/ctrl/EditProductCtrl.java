@@ -29,12 +29,12 @@ public class EditProductCtrl {
 
     @PostConstruct
     public void post() {
-        LOG.log(Level.INFO, "PersonDetailCtrl alive {0}", this);
+        LOG.log(Level.INFO, "EditProductCtrl alive {0}", this);
     }
 
     @PreDestroy
     public void pre() {
-        LOG.log(Level.INFO, "PersonDetailCtrl to be destroyed {0}", this);
+        LOG.log(Level.INFO, "EditProductCtrl to be destroyed {0}", this);
     }
 
     @Inject
