@@ -11,7 +11,19 @@
 
             <ui:define name="content">
                 <h3>Add product</h3>
-                
+                <h:form>
+                    <h:panelGrid columns="2" class="table">
+                        <h:outputLabel value="Name" />
+                        <h:inputText value=""/> 
+                        <h:outputLabel value="Price" />
+                        <h:inputText value=""/> 
+                    </h:panelGrid>
+                    <div class="btn-group">
+                        <h:commandButton value="Cancel" immediate="true" class="btn btn-default"
+                                         action="productList?faces-redirect=true" />
+                        <h:commandButton value="Add" action="#{addProductCtrl.add}" class="btn btn-default"/>
+                    </div>
+                </h:form>
             </ui:define>
         </ui:composition>
     </h:body>
