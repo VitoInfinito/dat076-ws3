@@ -45,7 +45,7 @@ public class ProductListBB implements Serializable {
     }
 
     public void next() {
-        if (currentPage * pageSize + 1 < count) {
+        if ((currentPage+1) * pageSize < count) {
             currentPage = currentPage + 1;
         }
     }
